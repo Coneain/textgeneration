@@ -69,15 +69,15 @@ def generate_sentence(d,n):
  
 ####################
 if __name__ == "__main__":
-    path="./Experiment/data/Romantic"
-    pathDir=os.listdir(path)
-    text=str()
-    for allDir in pathDir:
-        child=os.path.join('%s%s' % (path+'/', allDir))
-        with open(child,'rt',encoding="utf-8") as f:
-            text +=f.read()
-#    with open("inputc.txt",'rt',encoding='gbk') as f:
-#        text=f.read()
+#    path="./Experiment/data/Romantic"
+#    pathDir=os.listdir(path)
+#    text=str()
+#    for allDir in pathDir:
+#        child=os.path.join('%s%s' % (path+'/', allDir))
+#        with open(child,'rt',encoding="utf-8") as f:
+#            text +=f.read()
+    with open("examples.txt",'rt',encoding='gbk') as f:
+        text=f.read()
     words = text.split()
     print(words)
     n=2
