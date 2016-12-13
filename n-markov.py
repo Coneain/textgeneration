@@ -76,7 +76,7 @@ if __name__ == "__main__":
 #        child=os.path.join('%s%s' % (path+'/', allDir))
 #        with open(child,'rt',encoding="utf-8") as f:
 #            text +=f.read()
-    with open("examples.txt",'rt',encoding='gbk') as f:
+    with open("examples.txt",'rt',encoding='utf-8') as f:
         text=f.read()
     words = text.split()
     print(words)
