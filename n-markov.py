@@ -2,7 +2,7 @@
 """
 Created on Tue Dec  6 16:26:37 2016
 
-@author: Administrator
+Modified by Guo Yao
 """
 
 import sys
