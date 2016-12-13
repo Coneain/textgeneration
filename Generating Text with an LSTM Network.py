@@ -2,7 +2,7 @@
 """
 Created on Wed Dec 07 16:56:14 2016
 
-@author: Guo Yao
+@author: Jason Brownlee on August 4, 2016
 """
 
 # Load LSTM network and generate text
