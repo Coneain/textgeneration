@@ -38,8 +38,8 @@ def build_dict(words,n):
  
 def generate_sentence(d,n):
     li = [key for key in d.keys() if key[0][0].isupper()]
-#    key = choice(li)
-    key=('It','is')
+    key = choice(li)
+#    key=('It','is')
     li = []
     start=key[0]
     middle=key[-(n-1):]
@@ -89,5 +89,5 @@ if __name__ == "__main__":
         sent = generate_sentence(d,n)
         txt+=sent
     print(txt)
-    if sent in text:
-        print('# existing sentence :(')
+#    if sent in text:
+#        print('# existing sentence :(')
