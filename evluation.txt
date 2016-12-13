@@ -1,0 +1,78 @@
+Text generation results from different methods
+Examples 5 sentences:
+Stella rose and went to the window, and stood looking into the night.
+
+The moonlight was glinting the river in the distance, and falling in great masses upon the lawn at her feet. Half unconsciously she opened the window, and stepping out, found herself in a small garden,beautifully kept and fragrant with violets;
+
+her love for flowers was a passion, and she stepped on to the path in search of them.
+
+The path led in zigzag fashion to a little wooden gate, by which the garden was entered from the lane.
+
+Stella found some violets, and looking about in search of further treasure store, saw a bunch of lilac blossom growing in the lane side.
+
+N-Markov
+Method details:
+Variation of parameter N
+We can control N to choose that from N words generate the next word.
+
+N = 2:
+Half unconsciously she opened the window, and stood looking into the night.Stella rose and went to the path in search of them. Stella found some violets, and looking about in search of further treasure store, saw a bunch of lilac blossom growing in the distance, and falling in great masses upon the lawn at her feet.
+
+N = 3
+The path led in zigzag fashion to a little wooden gate, by which the garden was entered from the lane.The path led in zigzag fashion to a little wooden gate, by which the garden was entered from the lane.Half unconsciously she opened the window, and stepping out, found herself in a small garden,beautifully kept and fragrant with violets; her love for flowers was a passion, and she stepped on to the path in search of them.
+
+N = 4
+The path led in zigzag fashion to a little wooden gate, by which the garden was entered from the lane.The path led in zigzag fashion to a little wooden gate, by which the garden was entered from the lane.Half unconsciously she opened the window, and stepping out, found herself in a small garden,beautifully kept and fragrant with violets; her love for flowers was a passion, and she stepped on to the path in search of them.
+
+Char-rnn model
+char-rnn loss: 0.100053  generated characters:200
+ tella rose and went to the window, and stood looking into the night.
+The moonlight was glinting the river in the distance, and falling in great masses upon the lawn at her feet. Half unconsciously she
+
+char-rnn loss: 0.100275  generated characters:340
+ tella rose and went to the window, and stood looking into the night.
+The moonlight was glinting the river in the distance, and falling in great masses upon the lined fash li, groma look, she pathe to the wililac blethee
+ grofcla dint wowers ly king into the wiper.
+The pathiing in g in she passistmeov ae rose f liliced ungsoret wooden unit
+
+Words-rnn model
+iter 5200, loss: 0.350894
+generated words : 300
+
+
+rose and went to the window and stood looking into the night
+the moonlight was glinting the river in the distance and falling in great masses upon the lawn at her feet half unconsciously she opened the window and stepping out found herself in a small gardenbeautifully kept and fragrant with violets
+her love for flowers was a passion and she stepped on to the path in search of them
+the path led in zigzag fashion to a little wooden gate by which the garden was entered from the lane
+stella found some violets and looking about in search of further treasure store saw small zigzag unconsciously she opened the window and stepping out found herself in a passion gardenbeautifully kept and fragrant with violets
+her love for flowers was a passion and she stepped on to the path in search of them
+the path led in zigzag fashion to a little wooden gate by which the garden was entered from the lane
+stella found some violets and looking about in search of further treasure store saw masses upon the lawn at her feet half unconsciously she opened the window and stepping out found herself in a small gardenbeautifully kept and fragrant with violets
+her love for flowers was a passion and she stepped on to the path in search of them
+the path led in zigzag fashion to a little wooden gate by which the garden was entered from the lane
+stella found some violets and looking about in search of further treasure store saw some violets and looking about in search of further treasure store saw by gate from them
+the violets
+her a passion zigzag stepping out a herself moonlight a small gardenbeautifully kept and fragrant with violets
+her love for flowers was a passion and she stepped on to the path in search of them
+the path led in zigzag
+
+Generating Text with a small LSTM Network
+Configuration: 1 layer LSTM output 128
+Generated characters:340
+Total Characters:  640
+Total Vocab:  28
+Total Patterns:  300
+Seed:
+" to the night.
+the moonlight was glinting the river in the distance, and falling in great masses upon the lawn at her feet. half unconsciously she opened the window, and stepping out, found herself in a small garden,beautifully kept and fragrant with violets;
+her love for flowers was a passion, and she stepped on to the path in search of t "
+Larger LSTM Recurrent Neural Network
+Configuration: 2 layer LSTM output 128
+Generated characters:340
+Total Characters:  640
+Total Vocab:  28
+Total Patterns:  300
+Seed:
+" the lawn at her feet. half unconsciously she opened the window, and stepping out, found herself in a small garden,beautifully kept and fragrant with violets;
+her love for flowers was a passion, and she stepped on to the path in search of them.
+the path led in zigzag fashion to a little wooden gate, by which the garden was entered from the "
